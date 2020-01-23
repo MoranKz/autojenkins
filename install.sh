@@ -29,6 +29,10 @@ chown $executer:$executer /data
 
 sed -i "s/ubuntu/$executer/g" roles/emmetog.jenkins/defaults/main.yml
 
+if [ ! -f /etc/default/jenkins ]; then
+	touch /etc/default/jenkins
+fi 
+
 if [ ! -d venv ]; then
 	virtualenv venv
 fi

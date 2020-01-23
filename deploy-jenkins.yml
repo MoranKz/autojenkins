@@ -8,6 +8,6 @@
     jenkins_jobs: [
         "my-first-job",
       ]
-      
+    jenkins_auth: "none"
   roles:
     - emmetog.jenkins
